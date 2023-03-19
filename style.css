@@ -118,8 +118,8 @@ button:hover {
  
 @media (max-width:1000px) {
   .container {
-    max-width: 88vw;
-    margin: 15px auto;
+    max-width: 90vw;
+    margin: 12px auto;
   }
 }
 
