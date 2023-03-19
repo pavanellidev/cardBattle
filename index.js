@@ -5,13 +5,14 @@ const remaining = document.getElementById("remaining-cards")
 const computerScoreEl = document.getElementById("computer-score")
 const yourScoreEl = document.getElementById("your-score")
 const winnerText = document.querySelector('h2')
+let turns = 10
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            remaining.innerText = `Remaining cards: ${data.remaining}`
+            remaining.innerText = `Remaining turns: ${turns}`
             deckId = data.deck_id
         })
 }
@@ -60,9 +61,9 @@ document.getElementById("draw-cards").addEventListener("click", () => {
 
             winnerText.innerText = determineWinner(data.cards[0], data.cards[1])
 
-            remaining.innerText = `Remaining cards: ${data.remaining}`
+            remaining.innerText = `Remaining turns: ${turns = turns-1}`
 
-            if(data.remaining === 0) {
+            if(data.remaining === 32) {
                 document.querySelector('#draw-cards').style.cursor = 'none'
                 document.querySelector('button:hover').style.backgroundColor = '#ecbb3d'
                 document.querySelector('button:hover').style.color = '#ecbb3d'
