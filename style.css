@@ -173,7 +173,7 @@ button:hover {
 
 @media (max-width: 700px) {
   .container {
-    height: fit-content;
+    min-height: 94vh;
   }
   .title {
     font-size: 1.2rem;
@@ -212,5 +212,8 @@ button:hover {
   }
   #remaining-cards {
     font-size: 1rem;
+  }
+  #instructions {
+    font-size: 0.75rem;
   }
 }
