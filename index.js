@@ -6,6 +6,7 @@ const computerScoreEl = document.getElementById("computer-score")
 const yourScoreEl = document.getElementById("your-score")
 const winnerText = document.querySelector('h2')
 let turns = 10
+let turns2 = 10
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
@@ -60,8 +61,8 @@ document.getElementById("draw-cards").addEventListener("click", () => {
             }
 
             winnerText.innerText = determineWinner(data.cards[0], data.cards[1])
-
             remaining.innerText = `Remaining turns: ${turns = turns-1}`
+            document.querySelector('#draw-cards').innerText = `DRAW (${turns2 = turns2-1})`
 
             if(data.remaining === 32) {
                 document.querySelector('#draw-cards').style.cursor = 'none'
