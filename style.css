@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9e2e2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 65vw;
+  height: fit-content;
+  background: linear-gradient(to top, #6cca6c, #3e9b45 60%);
+  margin: 30px auto;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px #525252;
+}
+
+.match-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 2px solid #c5c5c5;
+}
+
+.title {
+  font-family: 'Arvo', serif;
+  color: #882c4b;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0px #e48aa8,
+  1px 1px 0px #e48aa8;
+}
+
+.match-content {
+  display: flex;
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+  color: #eeeeee;
+  font-size: 1.2rem;
+  gap: 20px;
+}
+
+#remaining-cards {
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+  color: #eeeeee;
+  font-size: 1.2rem;
+}
+
+button {
+  margin: 10px;
+  width: 14.5rem;
+  padding: 15px 20px;
+  border: 2px solid #ca9e2f;
+  border-radius: 5px;
+  background-color: #ecbb3d;
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: center;
+  box-shadow: 1px 2px 6px #525252;
+}
+
+button:hover {
+  background-color: #facc59;
+  color: #0fa10f;
+  border: 2px solid #ca9e2f;
+}
+
+#new-deck {
+  margin-top: 30px;
+}
+
+#draw-cards {
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  color: #1c491c;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#cards img {
+  max-width: 100%;
+}
+
+#card-slot1,
+#card-slot2 {
+  border: 2px solid #2e7933;
+  border-radius: 8px;
+  width: 160px;
+  height: 224px;
+}
+ 
+@media (max-width:1000px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    height: fit-content;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  button {
+    width: 8.6rem;
+    font-size: .8rem;
+    padding: 10px 15px;
+  }
+  #card-slot1,
+  #card-slot2 {
+    width: 100px;
+    height: 140px;
+  }
+  #computer-score,
+  #your-score {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 496px) {
+  .title {
+    font-size: 1rem;
+  }
+  #computer-score,
+  #your-score {
+    font-size: .9rem;
+    text-align: center;
+  }
+  .match-content {
+    padding: 0; 
+    gap: 15px;
+  }
+
+  #remaining-cards {
+    font-size: 1rem;
+  }
+}
