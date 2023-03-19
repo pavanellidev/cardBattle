@@ -192,7 +192,7 @@ button:hover {
   #your-score {
     font-size: 1rem;
   }
-  #instructions {
+  #instructions p{
     font-size: 0.9rem;
   }
 }
@@ -213,7 +213,7 @@ button:hover {
   #remaining-cards {
     font-size: 1rem;
   }
-  #instructions {
-    font-size: 0.75rem;
+  #instructions p{
+    font-size: 0.82rem;
   }
 }
