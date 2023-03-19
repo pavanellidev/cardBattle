@@ -144,6 +144,11 @@ button:hover {
   font-weight: bold;
   text-shadow: 1px 1px 1px black;
 }
+
+.draw {
+  color: blue;
+  text-shadow: 1px 1px 1px black;
+}
  
 @media (max-width:1000px) {
   .container {
