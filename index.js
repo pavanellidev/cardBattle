@@ -19,6 +19,9 @@ function handleClick() {
             document.getElementById('instructions').style.display = 'none'
             deckId = data.deck_id
         })
+        if(document.getElementById("new-deck").innerText === "RESTART GAME") {
+            window.location.reload()
+        }
 }
 
 document.getElementById("new-deck").addEventListener("click", handleClick)
@@ -42,6 +45,8 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 <img src=${data.cards[1].image} />  
             `
   
+            document.getElementById("new-deck").style.color = '#ecbb3d'
+            
             function determineWinner(card1, card2) {
                 const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
                 "10", "JACK", "QUEEN", "KING", "ACE"]
@@ -73,6 +78,8 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 document.querySelector('button:hover').style.backgroundColor = '#ecbb3d'
                 document.querySelector('button:hover').style.color = '#ecbb3d'
                 document.querySelector('#draw-cards').disabled = 'true'
+                document.getElementById("new-deck").innerText = 'RESTART GAME'
+                document.getElementById("new-deck").style.color = 'green'
                 if(computerScore > yourScore) {
                     winnerText.innerText = "Computer beats you!"
                     winnerText.classList.add('loose')
