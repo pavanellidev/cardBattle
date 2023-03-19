@@ -132,6 +132,16 @@ button:hover {
   font-weight: bold;
   position: absolute;
 }
+
+.win {
+  color: yellow;
+  font-weight: bold;
+}
+
+.loose {
+  color: red;
+  font-weight: bold;
+}
  
 @media (max-width:1000px) {
   .container {
