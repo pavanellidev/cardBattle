@@ -136,11 +136,13 @@ button:hover {
 .win {
   color: yellow;
   font-weight: bold;
+  text-shadow: 1px 1px 1px black;
 }
 
 .loose {
-  color: red;
+  color: #f0351c;
   font-weight: bold;
+  text-shadow: 1px 1px 1px black;
 }
  
 @media (max-width:1000px) {
