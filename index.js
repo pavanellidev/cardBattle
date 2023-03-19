@@ -67,6 +67,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 document.querySelector('#draw-cards').style.cursor = 'none'
                 document.querySelector('button:hover').style.backgroundColor = '#ecbb3d'
                 document.querySelector('button:hover').style.color = '#ecbb3d'
+                document.querySelector('#draw-cards').disabled = 'true'
                 if(computerScore > yourScore) {
                     winnerText.innerText = "Computer beats you!"
                     winnerText.classList.add('loose')
@@ -75,6 +76,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                     winnerText.classList.add('win')
                 } else if(computerScore == yourScore) {
                     winnerText.innerText = "It's a Draw."
+                    winnerText.classList.add('draw')
                 }
             }           
             
